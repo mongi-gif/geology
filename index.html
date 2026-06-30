@@ -83,168 +83,459 @@ var gastronomie = L.layerGroup().addTo(map);
 // Données (à enrichir)
 // ========================
 
-const sites = [
-
-{
+var sites = [
+  {
     nom: "Dyr El Kef",
-    type: "geologie",
     lat: 36.198,
-    lng: 8.727,
-    couleur: "red",
-    des:`Le synclinal perché de Dyr El Kef est une curiosité géologique majeure du Nord-Ouest de la Tunisie.
+    lng: 8.73,
+    type: "Géosite",
+    desc: `Le synclinal perché de Dyr El Kef est une curiosité géologique majeure du Nord-Ouest de la Tunisie.
     Il correspond à plateau qui culmine à environ 1 084 mètres d'altitude.
     Géologique, il s'agit d'une gouttière synclinale plissée dont la concavité est orientée vers le haut. 
     L'érosion a dégagé les contours, laissant la structure en relief par rapport aux vallées environnantes. 
     On parle alors de synclinal perché`,
-    image:"/images/Eddyr.jpg  ",
-    url: "https://drive.google.com/file/d/13B__lgAuCyeWWLBnbSm5qsHI62rjniuN/view?usp=sharing"
-},
-{
-    nom: "Stratotype K-Pg du Kef",
-    type: "geologie",
-    lat: 36.153,
-    lng: 8.648,
-    couleur: "red",
-    url: "https://drive.google.com/file/d/13srHXLY15B5ANww84mHWlnBysQmzWccJ/view?usp=sharing"
-},
-{
-    nom: "Série triasque du Débadib",
-    type: "geologie",
+   
+    images: [
+      {
+         url: "./images/Eddyr.jpg", 
+         titre: "Le synclinal perché de Dyr El Kef",
+      },
+     
+    ],
+  },
+
+
+  {
+    nom: "Coupe K-Pg El Kef",
+    lat: 36.154,
+    lng: 8.650,
+    type: "Géosite",
+    desc: `Le site d’El Kef, situé dans le gouvernorat du El Kef, est mondialement connu pour abriter le stratotype de référence internationale (GSSP) de la limite Crétacé–Paléogène (anciennement limite K–T). Ce site géologique exceptionnel marque l’une des plus grandes crises biologiques de l’histoire de la Terre : l’extinction massive survenue il y a environ 66 millions d’années, qui a entraîné la disparition 
+    des dinosaures et de nombreuses espèces marines et terrestres.` ,
+    images: [
+      {
+         url: "./images/kt01.png", 
+         titre: "Le synclinal perché de Dyr El Kef",
+      },
+    ]
+  },
+  
+  {
+    nom: "Ophites du Trias",
     lat: 36.175,
     lng: 8.583,
-    couleur: "red",
-    url: "https://drive.google.com/file/d/1U8Xa0oAe19KB6up6lUMAzQFsg_iE1OZn/view?usp=sharing"
-},
-{
-    nom: "Grotte spléologique",
-    type: "geologie",
-    lat: 36.0299,
+    type: "Géosite",
+    desc: `Les ophites du Trias sont des roches magmatiques basiques (souvent des dolérites ou basaltes altérés) 
+    associées aux formations évaporitiques triasiques.` ,
+    images: [
+      {
+         url: "./images/ophite.jpg", 
+         titre: "Ophites du Trias",
+      },
+    ]
+  },
+  
+  {
+    nom: "Grotte spéléologique",
+    lat: 36.029,
     lng: 8.321,
-    couleur: "red",
-    url: "https://drive.google.com/file/d/1XI48vuvIVFh9er21EKO03uZO_LbcqOqV/view?usp=sharing"
-},
-{
-    nom: "Niveau à Ammonites",
-    type: "geologie",
+    type: "Géosite",
+    desc: `La grotte du Jebel Harraba présente un karst interne riche en concrétions calcaires, dominé par 
+    des stalactites (pendantes) et des stalagmites (montantes).
+    Ces formations, appelées spéléothèmes, résultent de la précipitation 
+    du carbonate de calcium (CaCO₃) à partir des eaux d’infiltration chargées en bicarbonates.` ,
+    images: [
+      {
+         url: "./images/grotte.png", 
+         titre: "Le synclinal perché de Dyr El Kef",
+      },
+    ]
+  },
+
+  {
+    nom: "Niveau à ammonites",
     lat: 35.990,
     lng: 8.350,
-    couleur: "red",
-    url: "https://drive.google.com/file/d/13qjY9WSQljVTyOCmbYuz7d_NIxCRpHn_/view?usp=sharing"
-},
-{
-    nom: "récif aptien du jeble Slata",
-    type: "geologie",
+    type: "Géosite",
+    desc: `Les ammonites sont des animaux marins fossiles appartenant au groupe des céphalopodes, comme les poulpes et les calmars actuels.
+    Elles vivaient dans les océans entre environ 400 millions et 66 millions d’années.Les ammonites du Kef représentent parmi les derniers représentants 
+    de ce groupe avant son extinction définitive il y a environ 66 millions d'années. 
+    ` ,
+    images: [
+      {
+         url: "./images/ammonite.jpg", 
+         titre: "Ammonite de l'Aptien supérieur du Jebel Sidi Rabeh",
+      },
+    ]
+  },
+  
+  {
+    nom: "Récif du Jebel Slata",
     lat: 35.873,
     lng: 8.470,
-    couleur: "red",
-    url: "https://drive.google.com/file/d/1AupexraKu_yGd5oGDqvwCfXi-C-MqfDc/view?usp=sharing"
-},
-
-{
-    nom: "Mine de Jerissa",
-    type: "minier",
-    lat: 35.85,
-    lng: 8.63,
-    couleur: "blue",
-    url: "https://drive.google.com/file/d/1LO2kPfHMkvd88d4mDUQsYsHZ2oQrECMa/view?usp=sharing"
-},
-{
-    nom: "Phosphate de Sra Ouertane",
-    type: "minier",
-    lat: 35.821,
-    lng: 8.767,
-    couleur: "blue",
-    url: "https://drive.google.com/file/d/1p8fox3qBTJnIh8c2px_pQ74Z7ltTDI7j/view?usp=sharing"
-},
-
-{
-    nom: "Bou Jabeur",
-    type: "minier",
+    type: "Géosite",
+    desc: `Le Jebel Slata est un édifice diapirique triasique autour 
+    duquel se sont développés des dépôts carbonatés récifaux à l’Aptien.
+    ` ,
+    images: [
+      {
+         url: "./images/slata.jpg", 
+         titre: "récif Aptien supérieur du Jebel Slata",
+      },
+    ]
+  },
+  // Patrimoine minier
+  {
+    nom: "Mine de fer de Jerissa",
+    lat: 35.837,
+    lng: 8.638,
+    type: "mine",
+    desc: `La Mine de Jerissa est le plus important gisement de minerai de fer 
+    de Tunisie et l'une des plus anciennes exploitations minières du pays. 
+    Elle est située à environ 54 km au sud de Le Kef, 
+    dans le massif du Djebel Jerissa, au sein de l'Atlas tunisien
+    ` ,
+    images: [
+      {
+         url: "./images/galerie.png", 
+         titre: "Mine de fer de Jerissa",
+      },
+    ]
+  },
+  {
+    nom: "Mine de Boujaber",
     lat: 35.737,
     lng: 8.282,
-    couleur: "blue",
-    url: "https://drive.google.com/file/d/14mVyiJFh2MkW5Cc2nHHhr6nD6JRCOzZ2/view?usp=sharing"
-},
+    type: "mine",
+    desc: `Le site de Bou Jabeur constitue l'un des plus importants 
+    gisements polymétalliques de Tunisie. Il est connu pour ses 
+    minéralisations en plomb, zinc, barytine et fluorine encaissées 
+    dans les calcaires récifaux aptiens du Nord-Ouest tunisien. 
+    Le gisement a fait l'objet d'une exploitation industrielle 
+    durant une grande partie du XXᵉ siècle et représente 
+    aujourd'hui un témoin remarquable du patrimoine minier tunisien.
+    ` ,
+    images: [
+      {
+         url: "./images/boujaber.jpg", 
+         titre: "Mine de Pb Zn et Barytine de Boujaber",
+      },
+    ]
+  },
+  {
+    nom: "Phosphate de Sra ouertane",
+    lat: 35.802,
+    lng: 8.767,
+    type: "mine",
+    desc: `Le phosphate de Sra Ouertane est l’un des plus grands projets phosphatiers de Tunisie, encore non exploité 
+    mais très stratégique pour l’avenir du pays.
+    Le phosphate de Sra Ouertane est l’un des plus grands projets phosphatiers de Tunisie, encore peu exploité mais 
+    très stratégique pour l’avenir du pays.` ,
+    images: [
+      {
+         url: "./images/sra.jpg", 
+         titre: "Affleurement du niveau phosphaté",
+      },
+    ]
+  },
 
-{
-    nom: "Réserve de Saddine",
-    type: "naturel",
-    lat: 36.110,
-    lng: 8.510,
-    couleur: "green",
-    url: "https://drive.google.com/file/d/1fyc3V1YYzGRDXQYbCcmYzwIbK85OTDJ6/view?usp=sharing"
-},
-
-{
+  // Histoire
+  {
+    nom: "Circuit de la Medina du Kef",
+    lat: 36.18196,
+    lng: 8.71269,
+    type: "histoire",
+    desc: `Le circuit touristique de la Médina du Kef est un itinéraire 
+    culturel balisé qui traverse la vieille ville du nord-est au sud-ouest. 
+    Il met en lumière un patrimoine plurimillénaire et multireligieux exceptionnel, hérité ` ,
+   
+    images: [
+      {
+         url: "./images/kasbah.jpg", 
+         titre: "La Kasbah",
+      },
+      {
+         url: "./images/boumakhlouf.jpg", 
+         titre: "Mausolé Sidi Boumakhlouf",
+      },
+      {
+         url: "./images/Basilique.jpg", 
+         titre: "Basilique romaine",
+      },
+    ]
+  },
+  
+  {
     nom: "Sidi Zine",
-    type: "historique",
     lat: 36.125,
-    lng: 8.624,
-    couleur: "orange",
-    url: "https://drive.google.com/file/d/1kWUXl2BDnXk7UfUd1RemN42RcFVaTApj/view?usp=sharing"
+    lng: 8.634,
+    type: "histoire",
+    desc: `Le site de Sidi Zine (ou Sidi Zin), situé à environ 10 kilomètres 
+    au sud-ouest d'El Kef en Tunisie, est le site préhistorique le plus important du pays. 
+    Il témoigne d'une présence humaine exceptionnelle remontant à plus de 300 000 ans ` ,
+   
+    images: [
+      {
+         url: "./images/sidi_zine.jpg", 
+         titre: "Site Sidi Zine",
+      },
+      
+    ]
+  },
+  {
+    nom: "Althiburos",
+    lat: 35.879,
+    lng: 8.786,
+    type: "histoire",
+    desc: `Althiburos (ou Medeina) est une ancienne cité numide puis 
+    romaine située en Tunisie, dans le gouvernorat du Kef, au cœur 
+    de la délégation de Dahmani. Idéalement placée sur la grande voie 
+    romaine reliant Carthage à Théveste (actuelle Tébessa en Algérie), 
+    elle constitue aujourd'hui un site archéologique majeur et préservé du nord-ouest tunisien. ` ,
+   
+    images: [
+      {
+         url: "./images/althiburos.jpg", 
+         titre: "Althiburos",
+      },
+      
+    ]
+  },
+  
+  {
+    nom: "Hammam Mellegue",
+    lat: 36.183,
+    lng: 8.575,
+    type: "histoire",
+    desc: `<p>Hammam Mellegue est une station thermale et 
+    un site archéologique d'origine romaine situé dans 
+    le gouvernorat du Kef, en Tunisie, à environ 12 à 15 kilomètres 
+    à l'ouest/sud-est de la ville du Kef. Ce lieu fascinant combine une importance 
+    historique majeure, des vertus thérapeutiques reconnues et une curiosité 
+    géologique unique au monde. Les bassins d'origine romaine sont 
+    exceptionnellement bien conservés et continuent d'être alimentés 
+    en eau thermale, fonctionnant encore aujourd'hui comme un 
+    bain maure traditionnel pour les curistes et les familles.</p>` ,
+   
+    images: [
+      {
+         url: "./images/Hammam Mellgue.png", 
+         titre: "Hammam Mellegue",
+      },
+      
+    ]
+  },
+  {
+    nom: "table de Jughurta",
+    lat:35.746,
+    lng: 8.378,
+    type: "histoire",
+    desc: `La Table de Jugurtha est une montagne tabulaire (ou mesa) 
+    spectaculaire située dans le Nord-Ouest de la Tunisie, sur le 
+    territoire de la municipalité de Kalaat Senan (gouvernorat du Kef). 
+    Culminant à 1 271 mètres d'altitude et s'étendant sur plus de 80 hectares, ce site exceptionnel allie une structure géologique rare à un passé historique mythique lié à la résistance numide face à l'Empire romain. Elle figure sur la 
+    liste indicative du patrimoine mondial de l'UNESCO depuis 2017.`,
+    images: [
+      {
+         url: "./images/table jugh.jpg", 
+         titre: "Hammam Mellegue",
+      },
+      
+    ]
+  },
+  {
+    nom: "table de Jughurta",
+    lat:35.746,
+    lng: 8.378,
+    type: "histoire",
+    desc: `La Table de Jugurtha est une montagne tabulaire (ou mesa) 
+    spectaculaire située dans le Nord-Ouest de la Tunisie, sur le 
+    territoire de la municipalité de Kalaat Senan (gouvernorat du Kef). 
+    Culminant à 1 271 mètres d'altitude et s'étendant sur plus de 80 hectares, ce site exceptionnel allie une structure géologique rare à un passé historique mythique lié à la résistance numide face à l'Empire romain. Elle figure sur la 
+    liste indicative du patrimoine mondial de l'UNESCO depuis 2017.`,
+    images: [
+      {
+         url: "./images/table_jugh.jpg", 
+         titre: "Table de Jugurtha",
+      },
+      
+    ]
+  },
+
+  {
+    nom: "Elles",
+    lat:35.950,
+    lng: 9.097,
+    type: "histoire",
+    desc: `Elles est une localité rurale du Nord-Ouest tunisien, 
+    située, à environ 16 km au sud du Sers. Le site est connu pour son riche patrimoine 
+    archéologique, préhistorique et géologique. le site est célèbre pour ses dolmens mégalithiques     
+    numides, parmi les ensembles funéraires les plus remarquables de Tunisie.`,
+
+    images: [
+      {
+         url: "./images/dolmen_elles.jpg", 
+         titre: "dolmens mégalithiques d'Elles",
+      },
+      
+    ]
+  },
+  {
+    nom: "Réserve de saddine",
+    lat:35.950,
+    lng: 9.097,
+    type: "nature",
+    desc: `La Réserve naturelle de Saddine est l'une des plus importantes 
+    aires protégées du Nord-Ouest tunisien. Elle est située dans le gouvernorat 
+    du Le Kef, entre les régions de Sakiet Sidi Youssef et du Haut Tell tunisien. 
+    Elle couvre environ 2 610 hectares et a été créée comme réserve naturelle en 2009 
+    avant d'être inscrite sur la liste des zones humides d'importance internationale de 
+    la Convention Ramsar en 2015.`,
+
+    images: [
+      {
+         url: "./images/reserve_saddine.jpg", 
+         titre: "Réserves de Saddine",
+      },
+      
+    ]
+  },
+  {
+    nom: "Forêt de Nebeur",
+    lat:36.310,
+    lng: 8.694,
+    type: "nature",
+    desc: `La forêt de Nebeur, située au nord-ouest du gouvernorat du Kef en 
+    Tunisie, est un massif forestier exceptionnel qui s'étend sur plus de 4 600
+     hectares. Elle se caractérise par ses paysages montagneux 
+    verdoyants et sa proximité immédiate avec l'Oued et le barrage de Mellègue.`,
+
+    images: [
+      {
+         url: "./images/barrage_mellegue.jpg", 
+         titre: "Forêt de Nebeur",
+      },
+      
+    ]
+  },
+  {
+    nom: "Gastronomie chez Chef Fatma",
+    lat:36.18097,
+    lng: 8.70821,
+    type: "gastronomie",
+    desc: `Le patrimoine gastronomique du Kef se distingue en Tunisie par son originalité, 
+    marquée par d’audacieux mélanges sucrés-salés, l'usage généreux des herbes
+     de montagne (notamment le romarin) et des traditions paysannes ancestrales.
+     Gouttez les spécialités cullinaires phares (Borzgane, Knef, Malfouf, Rfissa, cousous..)`,
+
+    images: [
+      {
+         url: "./images/borzgane.jpg", 
+         titre: "Borzgane",
+      },
+      
+    ]
+  },
+  {
+    nom: "Gastronomie chez Dar Saïda",
+    lat:36.18120,
+    lng: 8.70770,
+    type: "gastronomie",
+    desc: `Le patrimoine gastronomique du Kef se distingue en Tunisie par son originalité, 
+    marquée par d’audacieux mélanges sucrés-salés, l'usage généreux des herbes
+     de montagne (notamment le romarin) et des traditions paysannes ancestrales.
+     Gouttez les spécialités cullinaires phares (Borzgane, Knef, Malfouf, Rfissa, cousous..)`,
+
+    images: [
+      {
+         url: "./images/rfissa.jpg", 
+         titre: "Borzgane",
+      },
+      
+    ]
+  },
+  {
+    nom: "Chajret oum Clalig",
+    lat:36.16858,
+    lng: 8.59243,
+    type: "ethno",
+    desc: `Le patrimoine gastronomique du Kef se distingue en Tunisie par son originalité, 
+    marquée par d’audacieux mélanges sucrés-salés, l'usage généreux des herbes
+     de montagne (notamment le romarin) et des traditions paysannes ancestrales.
+     Gouttez les spécialités cullinaires phares (Borzgane, Knef, Malfouf, Rfissa, cousous..)`,
+
+    images: [
+      {
+         url: "./images/rfissa.jpg", 
+         titre: "Borzgane",
+      },
+      
+    ]
+  },
+  
+];//fin sites
+
+
+// ===== AFFICHAGE =====
+sites.forEach(function(site) {
+
+ var imagesHTML = "";
+
+if (site.images) {
+  site.images.forEach(function(img) {
+    imagesHTML += 
+      "<div style='text-align:center;margin:5px;display:inline-block;'>" +
+        "<img src='" + img.url + "' width='250px' style='border-radius:6px; margin-left:20px'><br>" +
+        "<small>" + img.titre + "</small>" +
+      "</div>";
+  });
 }
+  var couleur = getColor(site.type);
 
+  L.circleMarker([site.lat, site.lng], {
+    radius: 12,
+    fillColor: couleur,
+    color: "red",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.9
+  }).addTo(map)
 
-];
+  .bindTooltip(site.nom, {
+    permanent: false,
+    direction: "right",
+    offset: [20, 0],   // 👈 décalage horizontal
+    className: "label"
+})
 
-// ========================
-// Ajout des points
-// ========================
-
-sites.forEach(site => {
-
-    let marker = L.circleMarker([site.lat, site.lng], {
-        radius: 15,
-        color: site.couleur,
-        fillOpacity: 0.8
-    });
-
-    marker.bindPopup(`
-    <h3>${site.nom}</h3>
-
-    ${site.image ? `<img src="${site.image}" width="200px" style="border-radius:8px;">` : ""}
-
-    <br><br>
-
-    <a href="${site.url}" target="_blank">
-    Voir la fiche complète
-    </a>
-`);
-
-    // Ajouter dans la bonne couche
-    if(site.type === "geologie") marker.addTo(geologie);
-    if(site.type === "minier") marker.addTo(minier);
-    if(site.type === "historique") marker.addTo(historique);
-    if(site.type === "naturel") marker.addTo(naturel);
-    if(site.type === "gastronomie") marker.addTo(gastronomie);
+.bindPopup(
+  "<b>" + site.nom + "</b><br>" +
+  imagesHTML + "<br>" +
+  "<b>Description :</b> " + site.desc
+);
 
 });
 
-// ========================
-// Fonctions filtres
-// ========================
 
-// Activer/désactiver couche
-function toggleLayer(layer) {
-    if(map.hasLayer(layer)){
-        map.removeLayer(layer);
-    } else {
-        map.addLayer(layer);
-    }
-}
+// 🧭 LÉGENDE
+var legend = L.control({position: "bottomright"});
 
-// Afficher tout
-function showAll(){
-    map.addLayer(geologie);
-    map.addLayer(minier);
-    map.addLayer(historique);
-    map.addLayer(naturel);
-    map.addLayer(gastronomie);
-}
+legend.onAdd = function () {
+  var div = L.DomUtil.create("div", "legend");
+  div.innerHTML += "<b>Patrimoine et Siences au Kef (Tunisie)</b><br>";
+  div.innerHTML += "<i style='background:#ff0000;width:10px;height:10px;display:inline-block;'></i> Patrimoine géologique<br>";
+  div.innerHTML += "<i style='background:#0000ff;width:10px;height:10px;display:inline-block;'></i> Patrimoine minier<br>";
+  div.innerHTML += "<i style='background:#66d9ff;width:10px;height:10px;display:inline-block;'></i> Patrimoine historique et archéologique<br>";
+  div.innerHTML += "<i style='background:#006622;width:10px;height:10px;display:inline-block;'></i> Patrimoine naturel<br>";
+  div.innerHTML += "<i style='background:#ffff00;width:10px;height:10px;display:inline-block;'></i> Patrimoine ethno Anthropologique<br>";
+  div.innerHTML += "<i style='background:#660000;width:10px;height:10px;display:inline-block;'></i> Tradition et artisanat<br>";
+  div.innerHTML += "<i style='background:#ff00ff;width:10px;height:10px;display:inline-block;'></i> Patrimoine gastronomique<br>";
+  return div;
+};
+
+legend.addTo(map);
 
 </script>
 
-</body>
-</html>
 </body>
 </html>
