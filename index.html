@@ -1,1 +1,250 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Géoparc du Kef</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<style>
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Boutons filtres */
+.controls {
+   position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+    /*background: white;*/
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/*.controls button {
+    margin: 3px;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}*/
+</style>
+</head>
+
+<body>
+
+<div class="controls">
+    <button onclick="showAll()">Tous</button>
+    <button onclick="toggleLayer(geologie)">🟥 Géologique</button>
+    <button onclick="toggleLayer(minier)">🟦 Minier</button>
+    <button onclick="toggleLayer(historique)">🟨 Historique</button>
+    <button onclick="toggleLayer(naturel)">🟩 Naturel</button>
+    <button onclick="toggleLayer(Ethnologie)">🟩 ethno</button>
+    <button onclick="toggleLayer(gastronomie)">🟪 Gastronomie</button>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+
+// Initialisation carte
+var map = L.map('map').setView([36.17, 8.70], 9);
+
+// Fond de carte
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap'
+}).addTo(map);
+
+// ========================
+// Couches
+// ========================
+
+var geologie = L.layerGroup().addTo(map);
+var minier = L.layerGroup().addTo(map);
+var historique = L.layerGroup().addTo(map);
+var naturel = L.layerGroup().addTo(map);
+var ethno = L.layerGroup().addTo(map);
+var gastronomie = L.layerGroup().addTo(map);
+
+// ========================
+// Données (à enrichir)
+// ========================
+
+const sites = [
+
+{
+    nom: "Dyr El Kef",
+    type: "geologie",
+    lat: 36.198,
+    lng: 8.727,
+    couleur: "red",
+    des:`Le synclinal perché de Dyr El Kef est une curiosité géologique majeure du Nord-Ouest de la Tunisie.
+    Il correspond à plateau qui culmine à environ 1 084 mètres d'altitude.
+    Géologique, il s'agit d'une gouttière synclinale plissée dont la concavité est orientée vers le haut. 
+    L'érosion a dégagé les contours, laissant la structure en relief par rapport aux vallées environnantes. 
+    On parle alors de synclinal perché`,
+    image:"/images/Eddyr.jpg  ",
+    url: "https://drive.google.com/file/d/13B__lgAuCyeWWLBnbSm5qsHI62rjniuN/view?usp=sharing"
+},
+{
+    nom: "Stratotype K-Pg du Kef",
+    type: "geologie",
+    lat: 36.153,
+    lng: 8.648,
+    couleur: "red",
+    url: "https://drive.google.com/file/d/13srHXLY15B5ANww84mHWlnBysQmzWccJ/view?usp=sharing"
+},
+{
+    nom: "Série triasque du Débadib",
+    type: "geologie",
+    lat: 36.175,
+    lng: 8.583,
+    couleur: "red",
+    url: "https://drive.google.com/file/d/1U8Xa0oAe19KB6up6lUMAzQFsg_iE1OZn/view?usp=sharing"
+},
+{
+    nom: "Grotte spléologique",
+    type: "geologie",
+    lat: 36.0299,
+    lng: 8.321,
+    couleur: "red",
+    url: "https://drive.google.com/file/d/1XI48vuvIVFh9er21EKO03uZO_LbcqOqV/view?usp=sharing"
+},
+{
+    nom: "Niveau à Ammonites",
+    type: "geologie",
+    lat: 35.990,
+    lng: 8.350,
+    couleur: "red",
+    url: "https://drive.google.com/file/d/13qjY9WSQljVTyOCmbYuz7d_NIxCRpHn_/view?usp=sharing"
+},
+{
+    nom: "récif aptien du jeble Slata",
+    type: "geologie",
+    lat: 35.873,
+    lng: 8.470,
+    couleur: "red",
+    url: "https://drive.google.com/file/d/1AupexraKu_yGd5oGDqvwCfXi-C-MqfDc/view?usp=sharing"
+},
+
+{
+    nom: "Mine de Jerissa",
+    type: "minier",
+    lat: 35.85,
+    lng: 8.63,
+    couleur: "blue",
+    url: "https://drive.google.com/file/d/1LO2kPfHMkvd88d4mDUQsYsHZ2oQrECMa/view?usp=sharing"
+},
+{
+    nom: "Phosphate de Sra Ouertane",
+    type: "minier",
+    lat: 35.821,
+    lng: 8.767,
+    couleur: "blue",
+    url: "https://drive.google.com/file/d/1p8fox3qBTJnIh8c2px_pQ74Z7ltTDI7j/view?usp=sharing"
+},
+
+{
+    nom: "Bou Jabeur",
+    type: "minier",
+    lat: 35.737,
+    lng: 8.282,
+    couleur: "blue",
+    url: "https://drive.google.com/file/d/14mVyiJFh2MkW5Cc2nHHhr6nD6JRCOzZ2/view?usp=sharing"
+},
+
+{
+    nom: "Réserve de Saddine",
+    type: "naturel",
+    lat: 36.110,
+    lng: 8.510,
+    couleur: "green",
+    url: "https://drive.google.com/file/d/1fyc3V1YYzGRDXQYbCcmYzwIbK85OTDJ6/view?usp=sharing"
+},
+
+{
+    nom: "Sidi Zine",
+    type: "historique",
+    lat: 36.125,
+    lng: 8.624,
+    couleur: "orange",
+    url: "https://drive.google.com/file/d/1kWUXl2BDnXk7UfUd1RemN42RcFVaTApj/view?usp=sharing"
+}
+
+
+];
+
+// ========================
+// Ajout des points
+// ========================
+
+sites.forEach(site => {
+
+    let marker = L.circleMarker([site.lat, site.lng], {
+        radius: 15,
+        color: site.couleur,
+        fillOpacity: 0.8
+    });
+
+    marker.bindPopup(`
+    <h3>${site.nom}</h3>
+
+    ${site.image ? `<img src="${site.image}" width="200px" style="border-radius:8px;">` : ""}
+
+    <br><br>
+
+    <a href="${site.url}" target="_blank">
+    Voir la fiche complète
+    </a>
+`);
+
+    // Ajouter dans la bonne couche
+    if(site.type === "geologie") marker.addTo(geologie);
+    if(site.type === "minier") marker.addTo(minier);
+    if(site.type === "historique") marker.addTo(historique);
+    if(site.type === "naturel") marker.addTo(naturel);
+    if(site.type === "gastronomie") marker.addTo(gastronomie);
+
+});
+
+// ========================
+// Fonctions filtres
+// ========================
+
+// Activer/désactiver couche
+function toggleLayer(layer) {
+    if(map.hasLayer(layer)){
+        map.removeLayer(layer);
+    } else {
+        map.addLayer(layer);
+    }
+}
+
+// Afficher tout
+function showAll(){
+    map.addLayer(geologie);
+    map.addLayer(minier);
+    map.addLayer(historique);
+    map.addLayer(naturel);
+    map.addLayer(gastronomie);
+}
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
