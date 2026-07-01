@@ -1,4 +1,13 @@
+
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -6,16 +15,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Projet Géoparc du Kef | Vers un UNESCO Global Geopark</title>
+<title>Projet Géoparc du Kef</title>
 
-<meta name="description" content="Portail officiel du Projet Géoparc du Kef - Géologie, patrimoine naturel, patrimoine minier, tourisme durable et géosites.">
+<meta name="description" content="Projet Géoparc du Kef - UNESCO Global Geopark">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
 <link rel="stylesheet" href="style.css">
 
@@ -23,7 +33,61 @@
 
 <body>
 
+<!-- ================= CARTE ================= -->
+
 <div id="map"></div>
+
+<!-- ================= MENU HAMBURGER ================= -->
+
+<button id="menuButton">☰</button>
+
+<!-- ================= PANNEAU LATERAL ================= -->
+
+<div id="sidebar">
+
+    <div class="sidebar-header">
+
+        <h2>Filtres</h2>
+
+        <button id="closeSidebar">✕</button>
+
+    </div>
+
+    <div class="filter">
+
+        <label>
+            <input type="checkbox" id="geo" checked>
+            🔴 Géologie
+        </label>
+
+        <label>
+            <input type="checkbox" id="mine" checked>
+            🔵 Patrimoine minier
+        </label>
+
+        <label>
+            <input type="checkbox" id="hist" checked>
+            🟠 Historique
+        </label>
+
+        <label>
+            <input type="checkbox" id="nature" checked>
+            🟢 Naturel
+        </label>
+
+        <label>
+            <input type="checkbox" id="ethno" checked>
+            🟤 Ethnographie
+        </label>
+
+        <label>
+            <input type="checkbox" id="gastro" checked>
+            🔷 Gastronomie
+        </label>
+
+    </div>
+
+</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -32,4 +96,5 @@
 </body>
 
 </html>
+</body>
 </html>
