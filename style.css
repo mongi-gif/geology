@@ -240,4 +240,34 @@ body{
 
 }
 
+.open-map-btn{
+
+    display:inline-block;
+
+    padding:14px 22px;
+
+    background:#0B5D3B;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    border-radius:10px;
+
+    transition:0.3s;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+
+}
+
+.open-map-btn:hover{
+
+    background:#14794F;
+
+    transform:translateY(-2px);
+
 }
