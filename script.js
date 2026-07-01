@@ -1,7 +1,7 @@
 // =======================
 // CARTE
 // =======================
-
+document.addEventListener("DOMContentLoaded", function () {
 const map = L.map('map').setView([36.17, 8.70], 9);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -189,3 +189,4 @@ filtre("nature",naturel);
 filtre("ethno",ethno);
 
 filtre("gastro",gastronomie);
+});
