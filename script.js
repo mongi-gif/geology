@@ -23,14 +23,14 @@ const sites = [
     lat: 36.198,
     lng: 8.727,
     couleur: "red",
-    description:`Le synclinal perché de Dyr El Kef est une curiosité géologique majeure du Nord-Ouest de la Tunisie.
+    /*description:`Le synclinal perché de Dyr El Kef est une curiosité géologique majeure du Nord-Ouest de la Tunisie.
     Il correspond à plateau qui culmine à environ 1 084 mètres d'altitude.
     Géologique, il s'agit d'une gouttière synclinale plissée dont la concavité est orientée vers le haut. 
     L'érosion a dégagé les contours, laissant la structure en relief par rapport aux vallées environnantes. 
     On parle alors de synclinal perché`,
     images:[
         "./images/Eddyr.jpg"
-    ],
+    ],*/
     url: "https://drive.google.com/file/d/13B__lgAuCyeWWLBnbSm5qsHI62rjniuN/view?usp=sharing"
 },
 
@@ -41,11 +41,11 @@ const sites = [
     lat: 36.153,
     lng: 8.648,
     couleur: "red",
-    description: `Le site d’El Kef, situé dans le gouvernorat du El Kef, est mondialement connu pour abriter le stratotype de référence internationale (GSSP) de la limite Crétacé–Paléogène (anciennement limite K–T). Ce site géologique exceptionnel marque l’une des plus grandes crises biologiques de l’histoire de la Terre : l’extinction massive survenue il y a environ 66 millions d’années, qui a entraîné la disparition 
+   /* description: `Le site d’El Kef, situé dans le gouvernorat du El Kef, est mondialement connu pour abriter le stratotype de référence internationale (GSSP) de la limite Crétacé–Paléogène (anciennement limite K–T). Ce site géologique exceptionnel marque l’une des plus grandes crises biologiques de l’histoire de la Terre : l’extinction massive survenue il y a environ 66 millions d’années, qui a entraîné la disparition 
     des dinosaures et de nombreuses espèces marines et terrestres.` ,
     images:[
         "./images/kt.png"
-    ],
+    ],*/
     url: "https://drive.google.com/file/d/13srHXLY15B5ANww84mHWlnBysQmzWccJ/view?usp=sharing"
 },
 {
@@ -67,13 +67,13 @@ const sites = [
     lat: 36.0299,
     lng: 8.321,
     couleur: "red",
-    description: `La grotte du Jebel Harraba présente un karst interne riche en concrétions calcaires, dominé par 
+    /*description: `La grotte du Jebel Harraba présente un karst interne riche en concrétions calcaires, dominé par 
     des stalactites (pendantes) et des stalagmites (montantes).
     Ces formations, appelées spéléothèmes, résultent de la précipitation 
     du carbonate de calcium (CaCO₃) à partir des eaux d’infiltration chargées en bicarbonates.` ,
      images:[
         "./images/grotte.png"
-    ],
+    ],*/
     url: "https://drive.google.com/file/d/1XI48vuvIVFh9er21EKO03uZO_LbcqOqV/view?usp=sharing"
 },
 {
@@ -96,11 +96,11 @@ const sites = [
     lat: 35.873,
     lng: 8.470,
     couleur: "red",
-    description: `Le Jebel Slata est un édifice diapirique triasique autour 
+    /*description: `Le Jebel Slata est un édifice diapirique triasique autour 
     duquel se sont développés des dépôts carbonatés récifaux à l’Aptien.` ,
      images:[
         "./images/slata.jpg"
-    ],
+    ],*/
     url: "https://drive.google.com/file/d/1AupexraKu_yGd5oGDqvwCfXi-C-MqfDc/view?usp=sharing"
 },
 
@@ -110,13 +110,13 @@ const sites = [
     lat: 35.85,
     lng: 8.63,
     couleur: "blue",
-    description: `La Mine de Jerissa est le plus important gisement de minerai de fer 
+    /*description: `La Mine de Jerissa est le plus important gisement de minerai de fer 
     de Tunisie et l'une des plus anciennes exploitations minières du pays. 
     Elle est située à environ 54 km au sud de Le Kef, 
     dans le massif du Djebel Jerissa, au sein de l'Atlas tunisien` ,
      images:[
         "./images/galerie.png"
-    ],
+    ],*/
     url: "https://drive.google.com/file/d/1LO2kPfHMkvd88d4mDUQsYsHZ2oQrECMa/view?usp=sharing"
 },
 {
@@ -261,7 +261,7 @@ const sites = [
     lng: 9.097,
     type: "historique",
     couleur: "orange",
-    description: `Elles est une localité rurale du Nord-Ouest tunisien, 
+    /*description: `Elles est une localité rurale du Nord-Ouest tunisien, 
     située, à environ 16 km au sud du Sers. Le site est connu pour son riche patrimoine 
     archéologique, préhistorique et géologique. le site est célèbre pour ses dolmens mégalithiques     
     numides, parmi les ensembles funéraires les plus remarquables de Tunisie.`,
