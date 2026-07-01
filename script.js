@@ -54,11 +54,11 @@ const sites = [
     lat: 36.175,
     lng: 8.583,
     couleur: "red",
-     description: `Les ophites du Trias sont des roches magmatiques basiques (souvent des dolérites ou basaltes altérés) 
+     /*description: `Les ophites du Trias sont des roches magmatiques basiques (souvent des dolérites ou basaltes altérés) 
     associées aux formations évaporitiques triasiques.` ,
      images:[
         "./images/ophite.jpg"
-    ],
+    ],*/
     url: "https://drive.google.com/file/d/1U8Xa0oAe19KB6up6lUMAzQFsg_iE1OZn/view?usp=sharing"
 },
 {
@@ -82,12 +82,12 @@ const sites = [
     lat: 35.990,
     lng: 8.350,
     couleur: "red",
-    description: `Les ammonites sont des animaux marins fossiles appartenant au groupe des céphalopodes, comme les poulpes et les calmars actuels.
+    /*description: `Les ammonites sont des animaux marins fossiles appartenant au groupe des céphalopodes, comme les poulpes et les calmars actuels.
     Elles vivaient dans les océans entre environ 400 millions et 66 millions d’années.Les ammonites du Kef représentent parmi les derniers représentants 
     de ce groupe avant son extinction définitive il y a environ 66 millions d'années.` ,
      images:[
         "./images/ammonite.jpg"
-    ],
+    ],*/
     url: "https://drive.google.com/file/d/13qjY9WSQljVTyOCmbYuz7d_NIxCRpHn_/view?usp=sharing"
 },
 {
@@ -125,13 +125,13 @@ const sites = [
     lat: 35.821,
     lng: 8.767,
     couleur: "blue",
-    description: `Le phosphate de Sra Ouertane est l’un des plus grands projets phosphatiers de Tunisie, encore non exploité 
+    /*description: `Le phosphate de Sra Ouertane est l’un des plus grands projets phosphatiers de Tunisie, encore non exploité 
     mais très stratégique pour l’avenir du pays.
     Le phosphate de Sra Ouertane est l’un des plus grands projets phosphatiers de Tunisie, encore peu exploité mais 
     très stratégique pour l’avenir du pays.` ,
      images:[
         "./images/sra.jpg"
-    ],
+    ],*/
     url: "https://drive.google.com/file/d/1p8fox3qBTJnIh8c2px_pQ74Z7ltTDI7j/view?usp=sharing"
 },
 
@@ -141,7 +141,7 @@ const sites = [
     lat: 35.737,
     lng: 8.282,
     couleur: "blue",
-    description:`Le site de Bou Jabeur constitue l'un des plus importants 
+    /*description:`Le site de Bou Jabeur constitue l'un des plus importants 
     gisements polymétalliques de Tunisie. Il est connu pour ses 
     minéralisations en plomb, zinc, barytine et fluorine encaissées 
     dans les calcaires récifaux aptiens du Nord-Ouest tunisien. 
@@ -150,7 +150,7 @@ const sites = [
     aujourd'hui un témoin remarquable du patrimoine minier tunisien.` ,
      images:[
         "./images/boujaber.jpg"
-    ],
+    ],*/
     url: "https://drive.google.com/file/d/14mVyiJFh2MkW5Cc2nHHhr6nD6JRCOzZ2/view?usp=sharing"
 },
 
@@ -160,7 +160,7 @@ const sites = [
     lng: 8.71269,
     type: "historique",
     couleur: "orange",
-    description: `Le circuit touristique de la Médina du Kef est un itinéraire 
+    /*description: `Le circuit touristique de la Médina du Kef est un itinéraire 
     culturel balisé qui traverse la vieille ville du nord-est au sud-ouest. 
     Il met en lumière un patrimoine plurimillénaire et multireligieux exceptionnel, hérité ` ,
    
@@ -169,7 +169,7 @@ const sites = [
          "./images/kasbah.jpg",
          "./images/boumakhlouf.jpg",
          "./images/Basilique.jpg"
-       ], 
+       ], */
 
         url: "https://www.siccaveneria.com/tourisme/patrimoine/16d5854d-d83a-11ea-af16-0242ac11000b"
 
@@ -181,7 +181,7 @@ const sites = [
     lng: 8.634,
     type: "historique",
     couleur: "orange",
-    description: `Le site de Sidi Zine (ou Sidi Zin), situé à environ 10 kilomètres 
+    /*description: `Le site de Sidi Zine (ou Sidi Zin), situé à environ 10 kilomètres 
     au sud-ouest d'El Kef en Tunisie, est le site préhistorique le plus important du pays. 
     Il témoigne d'une présence humaine exceptionnelle remontant à plus de 300 000 ans ` ,
    
@@ -189,7 +189,7 @@ const sites = [
 
        "./images/sidi_zine.jpg"
 
-    ],
+    ],*/
     url: "https://tunisiaforall.org/?page_id=2493"
 
   },
@@ -199,7 +199,7 @@ const sites = [
     lng: 8.786,
     type: "historique",
      couleur: "orange",
-    description: `Althiburos (ou Medeina) est une ancienne cité numide puis 
+    /*description: `Althiburos (ou Medeina) est une ancienne cité numide puis 
     romaine située en Tunisie, dans le gouvernorat du Kef, au cœur 
     de la délégation de Dahmani. Idéalement placée sur la grande voie 
     romaine reliant Carthage à Théveste (actuelle Tébessa en Algérie), 
@@ -209,7 +209,7 @@ const sites = [
 
     "./images/althiburos.jpg", 
       
-    ], 
+    ], */
         url: "https://www.persee.fr/doc/dha_0755-7256_2021_num_47_1_5065"
 
   },
@@ -220,7 +220,7 @@ const sites = [
     lng: 8.575,
     type: "historique",
     couleur: "orange",
-    description: `<p>Hammam Mellegue est une station thermale et 
+   /* description: `<p>Hammam Mellegue est une station thermale et 
     un site archéologique d'origine romaine situé dans 
     le gouvernorat du Kef, en Tunisie, à environ 12 à 15 kilomètres 
     à l'ouest/sud-est de la ville du Kef. Ce lieu fascinant combine une importance 
@@ -232,7 +232,7 @@ const sites = [
    
     images: [
        "./images/Hammam Mellgue.png",    
-    ],
+    ],*/
         url: "https://fr.aroundus.com/p/9636927-hammam-mellegue"
 
   },
@@ -242,14 +242,14 @@ const sites = [
     lat:35.746,
     lng: 8.378,
     couleur: "orange",
-    description: `La Table de Jugurtha est une montagne tabulaire (ou mesa) 
+    /*description: `La Table de Jugurtha est une montagne tabulaire (ou mesa) 
     spectaculaire située dans le Nord-Ouest de la Tunisie, sur le 
     territoire de la municipalité de Kalaat Senan (gouvernorat du Kef). 
     Culminant à 1 271 mètres d'altitude et s'étendant sur plus de 80 hectares, ce site exceptionnel allie une structure géologique rare à un passé historique mythique lié à la résistance numide face à l'Empire romain. Elle figure sur la 
     liste indicative du patrimoine mondial de l'UNESCO depuis 2017.`,
     images: [
    "./images/table_jugh.jpg",       
-    ],
+    ],*/
 
         url: "https://whc.unesco.org/fr/listesindicatives/6278/"
 
@@ -269,7 +269,7 @@ const sites = [
     images: [
       
          "./images/dolmen_elles.jpg"
-       ],
+       ],*/
            url: "https://fr.wikipedia.org/wiki/M%C3%A9galithes_d%27Ell%C3%A8s"
 
   },
@@ -279,7 +279,7 @@ const sites = [
     lng: 9.097,
     type: "naturel",
     couleur: "green",
-    description: `La Réserve naturelle de Saddine est l'une des plus importantes 
+    /*description: `La Réserve naturelle de Saddine est l'une des plus importantes 
     aires protégées du Nord-Ouest tunisien. Elle est située dans le gouvernorat 
     du Le Kef, entre les régions de Sakiet Sidi Youssef et du Haut Tell tunisien. 
     Elle couvre environ 2 610 hectares et a été créée comme réserve naturelle en 2009 
@@ -288,7 +288,7 @@ const sites = [
 
     images: [
    "./images/reserve_saddine.jpg",     
-    ],
+    ],*/
         url: "https://www.onagri.nat.tn/uploads/divers/atlas/RN_JebelSaddine.pdf"
 
   },
@@ -298,14 +298,14 @@ const sites = [
     lng: 8.694,
     type: "naturel",
     couleur: "green",
-    description: `La forêt de Nebeur, située au nord-ouest du gouvernorat du Kef en 
+    /*description: `La forêt de Nebeur, située au nord-ouest du gouvernorat du Kef en 
     Tunisie, est un massif forestier exceptionnel qui s'étend sur plus de 4 600
      hectares. Elle se caractérise par ses paysages montagneux 
     verdoyants et sa proximité immédiate avec l'Oued et le barrage de Mellègue.`,
 
     images: [
      "./images/barrage_mellegue.jpg",   
-    ],
+    ],*/
         url: "https://fr.wikipedia.org/wiki/Barrage_Mell%C3%A8gue"
 
   },
@@ -315,14 +315,14 @@ const sites = [
     lng: 8.70821,
     type: "gastronomie",
     couleur:"#53EAFD",
-    description: `Le patrimoine gastronomique du Kef se distingue en Tunisie par son originalité, 
+   /* description: `Le patrimoine gastronomique du Kef se distingue en Tunisie par son originalité, 
     marquée par d’audacieux mélanges sucrés-salés, l'usage généreux des herbes
      de montagne (notamment le romarin) et des traditions paysannes ancestrales.
      Gouttez les spécialités cullinaires phares (Borzgane, Knef, Malfouf, Rfissa, cousous..)`,
 
     images: [
     "./images/borzgane.jpg", 
-    ],
+    ],*/
         url: "https://www.tripadvisor.fr/LocationPhotoDirectLink-g946559-d21312292-i484251395-Chef_Fatma-Le_Kef_Le_Kef_Governorate.html"
 
   },
@@ -333,13 +333,13 @@ const sites = [
     lng: 8.59243,
     type: "ethno",
     couleur: "maroon",
-    description: `Chagret Oum Chlalig (شجرة أم الشلالق), également appelée l'arbre à rubans, 
+   /* description: `Chagret Oum Chlalig (شجرة أم الشلالق), également appelée l'arbre à rubans, 
     est un arbre historique, ulturel et mystique remarquable situé dans la région du Kef en Tunisie.)`,
 
     images: [
    "./images/oum_chlalig.jpg",
       
-    ],
+    ],*/
         url: "https://drive.google.com/file/d/1mMeImf0yFeDMPpfSxna01_LdPoyBw-uK/view?usp=sharing"
 
   },
