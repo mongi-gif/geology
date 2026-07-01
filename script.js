@@ -26,7 +26,7 @@ const gastronomie = L.layerGroup().addTo(map);
 const sites = [
 
 {
-    nom: "synclinal perché éocène de Dyr El Kef",
+    nom: "synclinal perché Dyr El Kef",
     type: "geologie",
     lat: 36.198,
     lng: 8.727,
@@ -37,7 +37,7 @@ const sites = [
 
   
 {
-    nom: "Stratotype K-Pg du Kef",
+    nom: "Site K-Pg du Kef",
     type: "geologie",
     lat: 36.153,
     lng: 8.648,
@@ -46,7 +46,7 @@ const sites = [
     url: "https://drive.google.com/file/d/13srHXLY15B5ANww84mHWlnBysQmzWccJ/view?usp=sharing"
 },
 {
-    nom: "Série triasque du Débadib",
+    nom: "Ophites du Trias",
     type: "geologie",
     lat: 36.175,
     lng: 8.583,
@@ -64,7 +64,7 @@ const sites = [
     url: "https://drive.google.com/file/d/1XI48vuvIVFh9er21EKO03uZO_LbcqOqV/view?usp=sharing"
 },
 {
-    nom: "Niveau à Ammonites de l'Aptien Supérieur",
+    nom: "Niveau à Ammonites ",
     type: "geologie",
     lat: 35.990,
     lng: 8.350,
@@ -73,7 +73,7 @@ const sites = [
     url: "https://drive.google.com/file/d/13qjY9WSQljVTyOCmbYuz7d_NIxCRpHn_/view?usp=sharing"
 },
 {
-    nom: "récif aptien du jeble Slata",
+    nom: "récif aptien",
     type: "geologie",
     lat: 35.873,
     lng: 8.470,
@@ -92,7 +92,7 @@ const sites = [
     url: "https://drive.google.com/file/d/1LO2kPfHMkvd88d4mDUQsYsHZ2oQrECMa/view?usp=sharing"
 },
 {
-    nom: "Phosphate de Sra Ouertane",
+    nom: "Phosphate Sra Ouertane",
     type: "minier",
     lat: 35.821,
     lng: 8.767,
@@ -112,7 +112,7 @@ const sites = [
 },
 
 {
-    nom: "Circuit de la Medina du Kef",
+    nom: "La Khasba",
     lat: 36.18196,
     lng: 8.71269,
     type: "historique",
@@ -195,7 +195,7 @@ const sites = [
 
   },
   {
-    nom: "Gastronomie chez Chef Fatma",
+    nom: "Gastronomie",
     lat:36.18097,
     lng: 8.70821,
     type: "gastronomie",
